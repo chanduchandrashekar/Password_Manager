@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block nav_actions %}
+<div class="ms-auto">
+    <span class="text-white me-3">Welcome,</span>
+    <a class="btn btn-outline-light btn-sm" href="{% url 'login' %}">Login</a>
+    <a class="btn btn-outline-light btn-sm" href="{% url 'register' %}">Register</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Welcome to Your Secure Password Manager 🔐</h1>
+    <p class="lead mt-3">Manage your credentials safely and securely.</p>
+    <a href="{% url 'register' %}" class="btn btn-primary btn-lg mt-3">Get Started</a>
+</div>
+{% endblock %}

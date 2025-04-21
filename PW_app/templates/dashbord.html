@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="mb-4">🔐 Your Saved Passwords</h2>
+<div>
+    <a href="{% url 'add_password' %}" class="btn btn-outline-primary mb-3">+ Add New Password</a>
+</div>
+
+
+{% if entries %}
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Website</th>
+            <th>username</th>
+            <th>Action</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.site }}</td>
+            <td>{{ entry.username}}</td>
+
+            <td class="flex items-center gap-3">
+                <a href="?view={{entry.id}}" class="btn btn-outline-info btn-sm">View</a>
+                <a href="{% url 'edit_existing_password' entry.id %}" class="btn btn-outline-warning btn-sm">Edit</a>
+                <form method="POST" action="{% url 'delete_savedpassword' entry.id %}">
+                  {% csrf_token%}
+                  <button type="submit" class="btn btn-outline-danger btn-sm">del</button>
+                </form>
+              </td>
+              <td>
+                {% if entry.decrypted_password %}
+                  {{ entry.decrypted_password }}
+                {% else %}
+                  
+                  •••••••••
+                {% endif %}
+              </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>No passwords stored yet.</p>
+{% endif %}
+{% endblock %}

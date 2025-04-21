@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+.Navbar{
+    height: 70px;
+    background-color:#F0FFFF;
+    padding-right: 30px;
+    padding-left: 30px;
+
+}
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+
+}
+li{
+    list-style: none;
+    display: inline;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 30px;
+    color: white;
+}
+#Manage{
+    background-color: #6674cc;
+    color: #FFFFFF;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    
+}
+#Signup{
+    height: 30px;
+    width: 100px;
+    color: #6674cc;
+    border-radius: 5px;
+    border-color: #6674cc;
+    background-color: #F0FFFF;
+    font-size: 16px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+#Signup:hover,#Manage:hover,#login:hover{
+    transform: scale(1.2);
+}
+
+#Login{
+    color: #1A2930;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+.Table,.Login_page{
+    width:70%; 
+    max-width: 400px; 
+    position: relative;
+    top: 70%;
+    left: 25%;
+    transform: transkate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px; 
+    padding: 50px 60px 70px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.Table,.Login_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.inputField{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+h1{
+    font-size: 30px;
+    color: #3c00a0;
+}
+#button_container{
+    width: 70px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-color: #6674cc;
+    color: #6674cc;
+    background-color: #F0FFFF;
+}
+#button_container:hover{
+    transform: scale(1.2);
+    background-color:#6674cc ;
+    color: #fff;
+
+}
+.inputField i{
+    margin-left: 9px;
+    color: #999;
+}
+
+
